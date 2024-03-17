@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .top {
+            height: 500px;
+            width: 300px;
+            margin-left: 300px;
+        }
+
+        .main-box {
+            background-color: rgb(69, 49, 178);
+            height: 15vh;
+            width: 100vh;
+            border-style: solid;
+            border-radius: 1px;
+            border-color: rgb(7, 7, 7);
+
+
+
+
+        }
+
+        .top-box {
+            background-color: rgb(92, 73, 197);
+            height: 75vh;
+            width: 100vh;
+            border-style: solid;
+            border-radius: 1px;
+            border-color: rgb(7, 7, 7);
+
+        }
+
+        .one {
+            background-color: blanchedalmond;
+            height: 40px;
+            width: 250px;
+        }
+    </style>
+    <script>
+        function Add() {
+            let firstNO = document.getElementById("number-one").value;
+            let secondNO = document.getElementById("number-two").value;
+            let total = Number(firstNO) + Number(secondNO);
+            document.getElementById("display").innerHTML = "the result is:" + total;
+        }
+        function Sub() {
+            let firstNO = document.getElementById("number-one").value;
+            let secondNO = document.getElementById("number-two").value;
+            let total = Number(firstNO) - Number(secondNO);
+            document.getElementById("display").innerHTML = "the result is:" + total;
+        }
+        function Mul() {
+            let firstNO = document.getElementById("number-one").value;
+            let secondNO = document.getElementById("number-two").value;
+            let total = Number(firstNO) * Number(secondNO);
+            document.getElementById("display").innerHTML = "the result is:" + total;
+        }
+        function clearFunction() {
+            let firstNO = document.getElementById("display").innerHTML = "";
+
+        }
+    </script>
+
+<body background="ii.jpeg" style="background-repeat: no-repeat; background-position: center; background-size: cover;">
+    <div class="top">
+        <div id="display" class="main-box"></div>
+        <div class="top-box">
+            <input id="number-one" class="one" placeholder="0">
+            <input id="number-two" class="one" placeholder="0">
+            <!--  -->
+            <br />
+            <button
+                style="height: 30px; width: 70px; background-color:rgb(89, 107, 226);font-size: 10px;margin-left: 90%; border-radius: 30%; margin-top: 30px; border-radius: 2px; border-color: black ; border-style: solids;"
+                onclick="clearFunction()">CLEAR
+            </button>
+            <br>
+            <button
+                style=" height: 30px; width:70px; background-color:rgb(89, 107, 226);margin-left: 90%; border-radius: 30%; margin-left: 90%; margin-top: 30px; font-size: 20px;"
+                onclick="Add()">+
+            </button>
+            <br>
+            <button
+                style=" height: 30px; width:70px; background-color:rgb(89, 107, 226);margin-left: 90%; border-radius: 30%;margin-left: 90%; margin-top: 30px; font-size: 20px;"
+                onclick="Sub()">-
+            </button>
+            <br>
+            <button
+                style=" height: 30px; width:70px; background-color:rgb(89, 107, 226);margin-left: 90%; border-radius: 30%; margin-top: 30px;font-size: 20px;"
+                onclick="Mul()">*
+            </button>
+        </div>
+    </div>
+</body>
+</head>
+
+</html>
